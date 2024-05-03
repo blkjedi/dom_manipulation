@@ -24,6 +24,8 @@ const subMenuEl= document.getElementById("sub-menu");
 const topMenuEl = document.getElementById("top-menu");
 
 
+
+
 mainEl.style.backgroundColor = 'var(--main-bg)';
 topMenuEl.style.height = '100%';
 topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
@@ -61,3 +63,14 @@ topMenuEl.appendChild(menuLink)
 
 });
 
+const topMenuLinks = document.getElementsByTagName('a');
+console.log(topMenuLinks); 
+
+
+topMenuEl.addEventListener('click', function(e){
+e.preventDefault();
+if (e !== topMenuLinks) {
+  return console.log('was not an <a> element');
+}
+
+});
